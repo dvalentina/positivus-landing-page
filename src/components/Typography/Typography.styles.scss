@@ -1,11 +1,9 @@
 @use 'src/styles/colors';
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-
-$space-grotesk: 'Space Grotesk', sans-serif;
+@use 'src/styles/typography';
 
 .typography {
   &__h1 {
-    font-family: $space-grotesk;
+    font-family: typography.$space-grotesk;
     font-weight: 500;
 
     &--desktop {
@@ -18,7 +16,7 @@ $space-grotesk: 'Space Grotesk', sans-serif;
   }
 
   &__h2 {
-    font-family: $space-grotesk;
+    font-family: typography.$space-grotesk;
     font-weight: 500;
 
     &--desktop {
@@ -31,7 +29,7 @@ $space-grotesk: 'Space Grotesk', sans-serif;
   }
 
   &__h3 {
-    font-family: $space-grotesk;
+    font-family: typography.$space-grotesk;
     font-weight: 500;
 
     &--desktop {
@@ -44,7 +42,7 @@ $space-grotesk: 'Space Grotesk', sans-serif;
   }
 
   &__h4 {
-    font-family: $space-grotesk;
+    font-family: typography.$space-grotesk;
     font-weight: 500;
 
     &--desktop {
@@ -57,7 +55,7 @@ $space-grotesk: 'Space Grotesk', sans-serif;
   }
 
   &__p {
-    font-family: $space-grotesk;
+    font-family: typography.$space-grotesk;
     font-weight: 400;
 
     &--desktop {
