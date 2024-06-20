@@ -1,0 +1,24 @@
+.about-us {
+  display: flex;
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    width: 531px;
+
+    &-subtitle {
+      span {
+        font-size: 20px;
+      }
+
+      width: 498px;
+    }
+  }
+
+  &-illustration {
+    margin-left: auto;
+    width: 600px;
+    height: 515px;
+  }
+}
