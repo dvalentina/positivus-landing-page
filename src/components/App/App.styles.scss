@@ -1,0 +1,16 @@
+@use 'src/styles/colors';
+
+.app {
+  background: colors.$white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-content {
+    width: 1240px;
+  }
+
+  &__header {
+    margin-top: 60px;
+  }
+}

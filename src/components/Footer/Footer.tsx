@@ -5,16 +5,9 @@ import FacebookLogo from '../../../public/assets/facebook.svg?react';
 import TwitterLogo from '../../../public/assets/twitter.svg?react';
 import Button from '../Button/Button';
 import PositivusLogo from '../PositivusLogo/PositivusLogo';
+import { navigationLinks } from '../../constants';
 
 function Footer() {
-  const navigationLinks = [
-    { name: 'About Us', link: '/' },
-    { name: 'Services', link: '/' },
-    { name: 'Use Cases', link: '/' },
-    { name: 'Prices', link: '/' },
-    { name: 'Blog', link: '/' },
-  ];
-
   const navigationLinksComponents = navigationLinks.map((item) => (
     <a href={item.link} className='footer-link'>
       <Typography role='span' type='p' color='secondary'>

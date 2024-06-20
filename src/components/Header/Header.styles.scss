@@ -1,0 +1,25 @@
+@use 'src/styles/colors';
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 68px;
+
+  &-link {
+    text-decoration: none;
+  }
+
+  &-navigation {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__header-navigation {
+    margin-right: 40px;
+    margin-left: auto;
+  }
+
+  &-logo {
+    color: colors.$black;
+  }
+}
