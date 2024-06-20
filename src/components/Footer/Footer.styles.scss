@@ -82,19 +82,6 @@
     }
   }
 
-  &-button {
-    border-radius: 14px;
-    background: colors.$green;
-    padding: 20px 35px;
-    font-family: typography.$space-grotesk;
-    font-size: 20px;
-    line-height: 28px;
-    text-wrap: nowrap;
-    border: 0;
-    height: 68px;
-    cursor: pointer;
-  }
-
   &-signature {
     display: flex;
     gap: 40px;

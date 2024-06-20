@@ -4,6 +4,7 @@ import PositivusLogo from '../../../public/assets/positivus-logo.svg?react';
 import LinkedinLogo from '../../../public/assets/linkedin.svg?react';
 import FacebookLogo from '../../../public/assets/facebook.svg?react';
 import TwitterLogo from '../../../public/assets/twitter.svg?react';
+import Button from '../Button/Button';
 
 function Footer() {
   const navigationLinks = [
@@ -54,7 +55,11 @@ function Footer() {
         </div>
         <form className='footer-subscribe-form'>
           <input className='footer-input' placeholder='Email'></input>
-          <button className='footer-button'>Subscribe to news</button>
+          <Button
+            label='Subscribe to news'
+            variant='tertiary'
+            onClick={(event) => event.preventDefault()}
+          />
         </form>
       </div>
       <hr />
