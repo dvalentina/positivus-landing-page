@@ -1,0 +1,64 @@
+@use 'src/styles/colors';
+@use 'src/styles/typography';
+
+.button {
+  position: relative;
+  border-radius: 14px;
+  padding: 20px 35px;
+  font-family: typography.$space-grotesk;
+  font-size: 20px;
+  line-height: 28px;
+  text-wrap: nowrap;
+  border: 0;
+  height: 68px;
+  cursor: pointer;
+
+  transition: transform 0.2s;
+  overflow: hidden;
+
+  &__label {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:active {
+    transform: translateY(3px);
+  }
+
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 110%;
+    aspect-ratio: 1;
+    background-color: colors.$white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.05);
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  &:hover::after {
+    opacity: 0.3;
+    transform-origin: 50% 50%;
+    transform: scale(1) translate(-50%, -50%);
+  }
+
+  &--primary {
+    background-color: colors.$dark;
+    color: colors.$white;
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: colors.$black;
+    border: 1px solid colors.$dark;
+  }
+
+  &--tertiary {
+    background-color: colors.$green;
+    color: colors.$black;
+  }
+}
