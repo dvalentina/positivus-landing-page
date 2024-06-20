@@ -1,0 +1,26 @@
+@use 'src/styles/animation';
+
+.positivus-logo {
+  position: relative;
+  overflow: visible;
+
+  &__star {
+    position: absolute;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  &:hover &__star {
+    @include animation.keyframes(wiggle) {
+      0%,
+      100% {
+        transform: rotate(-20deg);
+      }
+      50% {
+        transform: rotate(20deg);
+      }
+    }
+
+    @include animation.animate(wiggle 0.2s ease-in-out 2);
+  }
+}

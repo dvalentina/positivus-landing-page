@@ -1,10 +1,10 @@
 import Typography from '../Typography/Typography';
 import './Footer.styles.scss';
-import PositivusLogo from '../../../public/assets/positivus-logo.svg?react';
 import LinkedinLogo from '../../../public/assets/linkedin.svg?react';
 import FacebookLogo from '../../../public/assets/facebook.svg?react';
 import TwitterLogo from '../../../public/assets/twitter.svg?react';
 import Button from '../Button/Button';
+import PositivusLogo from '../PositivusLogo/PositivusLogo';
 
 function Footer() {
   const navigationLinks = [
