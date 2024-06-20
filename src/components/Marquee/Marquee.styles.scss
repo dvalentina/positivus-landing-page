@@ -1,0 +1,16 @@
+.marquee {
+  overflow: hidden;
+  mix-blend-mode: luminosity;
+
+  &__part {
+    display: flex;
+    width: 1240px;
+    justify-content: space-around;
+  }
+
+  &__inner {
+    width: fit-content;
+    flex-shrink: 0;
+    display: flex;
+  }
+}
