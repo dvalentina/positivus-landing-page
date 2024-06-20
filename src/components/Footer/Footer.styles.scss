@@ -13,92 +13,98 @@ $space-grotesk: 'Space Grotesk', sans-serif;
   display: flex;
   flex-direction: column;
   gap: 50px;
-}
 
-.footer-navigation {
-  display: flex;
-  justify-content: space-between;
-}
+  &-navigation {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.footer-social-icons {
-  display: flex;
-  gap: 20px;
-}
+  &__footer-navigation {
+    margin-bottom: 16px;
+  }
 
-.footer__footer-navigation {
-  margin-bottom: 16px;
-}
+  &-social-icons {
+    display: flex;
+    gap: 20px;
+  }
 
-.footer-navigation-links {
-  display: flex;
-  gap: 40px;
-}
+  &-navigation-links {
+    display: flex;
+    gap: 40px;
+  }
 
-.logo {
-  height: 29px;
-  width: 180px;
-  color: colors.$white;
-}
+  &-logo {
+    height: 29px;
+    width: 180px;
+    color: colors.$white;
+  }
 
-.contacts-wrapper {
-  display: flex;
-  gap: 154px;
-}
+  &-contacts-wrapper {
+    display: flex;
+    gap: 154px;
+  }
 
-.contact-us {
-  display: flex;
-  flex-direction: column;
-  gap: 27px;
-}
+  &-contact-us {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+  }
 
-.contacts-list {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
+  &-contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-.subscribe-form {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 40px 58px;
-  background: colors.$dark-grey;
-  border-radius: 14px;
-}
+  &-subscribe-form {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 58px;
+    background: colors.$dark-grey;
+    border-radius: 14px;
+  }
 
-.input {
-  width: 285px;
-  height: 68px;
-  background: transparent;
-  border: 1px solid colors.$white;
-  border-radius: 14px;
-  padding: 22px 35px;
-  box-sizing: border-box;
-  color: colors.$white;
-  font-family: $space-grotesk;
-  font-size: 18px;
-
-  &::placeholder {
+  &-input {
+    width: 285px;
+    height: 68px;
+    background: transparent;
+    border: 1px solid colors.$white;
+    border-radius: 14px;
+    padding: 22px 35px;
+    box-sizing: border-box;
     color: colors.$white;
     font-family: $space-grotesk;
     font-size: 18px;
+
+    &::placeholder {
+      color: colors.$white;
+      font-family: $space-grotesk;
+      font-size: 18px;
+    }
   }
-}
 
-.button {
-  border-radius: 14px;
-  background: colors.$green;
-  padding: 20px 35px;
-  font-family: $space-grotesk;
-  font-size: 20px;
-  line-height: 28px;
-  text-wrap: nowrap;
-  border: 0;
-  height: 68px;
-  cursor: pointer;
-}
+  &-button {
+    border-radius: 14px;
+    background: colors.$green;
+    padding: 20px 35px;
+    font-family: $space-grotesk;
+    font-size: 20px;
+    line-height: 28px;
+    text-wrap: nowrap;
+    border: 0;
+    height: 68px;
+    cursor: pointer;
+  }
 
-.footer-signature {
-  display: flex;
-  gap: 40px;
+  &-signature {
+    display: flex;
+    gap: 40px;
+  }
+
+  &-link {
+    text-decoration: underline;
+    color: colors.$white;
+    text-underline-offset: 2px;
+  }
 }

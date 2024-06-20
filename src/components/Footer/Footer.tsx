@@ -6,26 +6,28 @@ import FacebookLogo from '../../../public/assets/facebook.svg?react';
 import TwitterLogo from '../../../public/assets/twitter.svg?react';
 
 function Footer() {
+  const navigationLinks = [
+    { name: 'About Us', link: '/' },
+    { name: 'Services', link: '/' },
+    { name: 'Use Cases', link: '/' },
+    { name: 'Prices', link: '/' },
+    { name: 'Blog', link: '/' },
+  ];
+
+  const navigationLinksComponents = navigationLinks.map((item) => (
+    <a href={item.link} className='footer-link'>
+      <Typography role='span' type='p' color='secondary'>
+        {item.name}
+      </Typography>
+    </a>
+  ));
+
   return (
     <footer className='footer'>
       <div className='footer-navigation footer__footer-navigation'>
-        <PositivusLogo className='logo' />
+        <PositivusLogo className='footer-logo' />
         <div className='footer-navigation-links'>
-          <Typography role='span' type='p' color='secondary'>
-            About Us
-          </Typography>
-          <Typography role='span' type='p' color='secondary'>
-            Services
-          </Typography>
-          <Typography role='span' type='p' color='secondary'>
-            Use Cases
-          </Typography>
-          <Typography role='span' type='p' color='secondary'>
-            Prices
-          </Typography>
-          <Typography role='span' type='p' color='secondary'>
-            Blog
-          </Typography>
+          {navigationLinksComponents}
         </div>
         <div className='footer-social-icons'>
           <LinkedinLogo />
@@ -33,12 +35,12 @@ function Footer() {
           <TwitterLogo />
         </div>
       </div>
-      <div className='contacts-wrapper'>
-        <div className='contact-us'>
+      <div className='footer-contacts-wrapper'>
+        <div className='footer-contact-us'>
           <Typography role='h4' type='h4' color='primary' highlight='accent'>
             Contact us:
           </Typography>
-          <div className='contacts-list'>
+          <div className='footer-contacts-list'>
             <Typography role='p' type='p' color='secondary'>
               Email: info@positivus.com
             </Typography>
@@ -50,9 +52,9 @@ function Footer() {
             </Typography>
           </div>
         </div>
-        <form className='subscribe-form'>
-          <input className='input' placeholder='Email'></input>
-          <button className='button'>Subscribe to news</button>
+        <form className='footer-subscribe-form'>
+          <input className='footer-input' placeholder='Email'></input>
+          <button className='footer-button'>Subscribe to news</button>
         </form>
       </div>
       <hr />
@@ -60,9 +62,11 @@ function Footer() {
         <Typography role='span' type='p' color='secondary'>
           © 2023 Positivus. All Rights Reserved.
         </Typography>
-        <Typography role='span' type='p' color='secondary'>
-          Privacy Policy
-        </Typography>
+        <a href='/' className='footer-link'>
+          <Typography role='span' type='p' color='secondary'>
+            Privacy Policy
+          </Typography>
+        </a>
       </div>
     </footer>
   );
