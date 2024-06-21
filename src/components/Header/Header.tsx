@@ -4,7 +4,7 @@ import PositivusLogo from '../PositivusLogo/PositivusLogo';
 import Typography from '../Typography/Typography';
 import './Header.styles.scss';
 
-function Header({ className }: { className?: string }) {
+function Header({ className = '' }: { className?: string }) {
   const navigationLinksComponents = navigationLinks.map((item) => (
     <a href={item.link} className='header-link'>
       <Typography role='span' type='p' color='primary'>
@@ -14,16 +14,18 @@ function Header({ className }: { className?: string }) {
   ));
 
   return (
-    <header className={`header ${className || ''}`}>
-      <PositivusLogo className='header-logo' />
-      <nav className='header-navigation header__header-navigation'>
-        {navigationLinksComponents}
-      </nav>
-      <Button
-        label='Request a quote'
-        onClick={(event) => event.preventDefault()}
-        variant='secondary'
-      />
+    <header className={`header ${className}`}>
+      <div className='header__content'>
+        <PositivusLogo className='header-logo' />
+        <nav className='header-navigation header__header-navigation'>
+          {navigationLinksComponents}
+        </nav>
+        <Button
+          label='Request a quote'
+          onClick={(event) => event.preventDefault()}
+          variant='secondary'
+        />
+      </div>
     </header>
   );
 }
