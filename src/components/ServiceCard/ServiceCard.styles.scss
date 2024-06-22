@@ -1,0 +1,96 @@
+@use 'src/styles/colors';
+
+.service-card-wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+
+  &::after {
+    content: '';
+    border-radius: 0 0 45px 45px;
+    width: 600px;
+    height: 90px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background: colors.$black;
+    transform: translateZ(-1px);
+    transition: bottom 0.1s ease-in;
+  }
+
+  &:hover {
+    .service-card {
+      transform: translateY(-7px);
+    }
+  }
+}
+
+.service-card {
+  width: 600px;
+  height: 310px;
+  border: 1px solid colors.$black;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-radius: 45px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in;
+
+  &__image {
+    width: 210px;
+    object-fit: contain;
+  }
+
+  &-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__learn-more {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+    &--primary,
+    &--accent {
+      .arrow-icon {
+        &__circle {
+          color: colors.$dark;
+        }
+        &__arrow {
+          color: colors.$green;
+        }
+      }
+    }
+
+    &--secondary {
+      .arrow-icon {
+        &__circle {
+          color: colors.$white;
+        }
+        &__arrow {
+          color: colors.$dark;
+        }
+      }
+    }
+  }
+
+  &-link__text {
+    span {
+      font-size: 20px;
+    }
+  }
+
+  &--primary {
+    background: colors.$grey;
+  }
+
+  &--secondary {
+    background: colors.$dark;
+  }
+
+  &--accent {
+    background: colors.$green;
+  }
+}

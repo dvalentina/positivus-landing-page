@@ -6,6 +6,7 @@ import Marquee from '../Marquee/Marquee';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLayoutEffect } from 'react';
+import Services from '../Services/Services';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -29,6 +30,7 @@ function App() {
           <div className='app__header-placeholder' />
           <AboutUs className='app__about-us' />
           <Marquee className='app__marquee' />
+          <Services className='app__services' />
           <Footer />
         </div>
       </div>
