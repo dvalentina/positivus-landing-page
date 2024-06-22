@@ -54,7 +54,7 @@
 
     &--primary,
     &--accent {
-      .arrow-icon {
+      .circle-arrow-icon {
         &__circle {
           color: colors.$dark;
         }
@@ -65,7 +65,7 @@
     }
 
     &--secondary {
-      .arrow-icon {
+      .circle-arrow-icon {
         &__circle {
           color: colors.$white;
         }

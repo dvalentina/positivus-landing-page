@@ -1,6 +1,6 @@
 import Typography from '../Typography/Typography';
 import './ServiceCard.styles.scss';
-import ArrowIcon from '../../../public/assets/arrow-icon.svg?react';
+import ArrowIcon from '../../../public/assets/circle-arrow-icon.svg?react';
 
 interface IServiceCard {
   variant?: 'primary' | 'secondary' | 'accent';
