@@ -27,7 +27,10 @@ function AboutUs({ className }: { className?: string }) {
       });
     }
 
-    floatIt('.about-us-illustration__circle');
+    floatIt({
+      targetClassName: '.about-us-illustration__circle',
+      yPercent: 50,
+    });
     spinIt({
       targetClassName: '.about-us-illustration__star--large',
       duration: 30,

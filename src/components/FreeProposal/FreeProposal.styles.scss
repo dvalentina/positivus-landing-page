@@ -1,0 +1,30 @@
+@use 'src/styles/colors';
+
+.free-proposal {
+  border-radius: 48px;
+  background: colors.$grey;
+  height: 347px;
+  // height: auto;
+  padding: 60px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+
+  &-text {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+
+    .button {
+      width: fit-content;
+    }
+  }
+
+  &__illustration {
+    position: absolute;
+    top: -23px;
+    right: 135px;
+    overflow: visible;
+  }
+}

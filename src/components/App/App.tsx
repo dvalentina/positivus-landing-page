@@ -7,6 +7,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLayoutEffect } from 'react';
 import Services from '../Services/Services';
+import FreeProposal from '../FreeProposal/FreeProposal';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -31,6 +32,7 @@ function App() {
           <AboutUs className='app__about-us' />
           <Marquee className='app__marquee' />
           <Services className='app__services' />
+          <FreeProposal className='app__free-proposal' />
           <Footer />
         </div>
       </div>
