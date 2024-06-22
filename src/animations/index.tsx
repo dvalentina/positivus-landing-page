@@ -10,10 +10,13 @@ export const parallaxIt = (
   const locationY = event.pageY;
 
   const x =
-    ((locationX - containerRef.offsetWidth / 2) / containerRef?.offsetWidth) *
+    ((locationX - containerRef.offsetWidth / 2) / containerRef.offsetWidth) *
     movement;
   const y =
-    ((locationY - containerRef.offsetHeight / 2) / containerRef.offsetHeight) *
+    ((locationY -
+      document.documentElement.scrollTop -
+      containerRef.offsetHeight / 2) /
+      containerRef.offsetHeight) *
     movement;
 
   gsap.to(targetClassName, {
@@ -23,9 +26,15 @@ export const parallaxIt = (
   });
 };
 
-export const floatIt = (targetClassName: string) => {
+export const floatIt = ({
+  targetClassName,
+  yPercent,
+}: {
+  targetClassName: string;
+  yPercent: gsap.TweenValue;
+}) => {
   gsap.to(targetClassName, {
-    yPercent: 50,
+    yPercent,
     ease: Sine.easeInOut,
     duration: 2,
     stagger: {
