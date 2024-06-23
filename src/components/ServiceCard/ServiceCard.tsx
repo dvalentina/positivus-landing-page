@@ -1,6 +1,6 @@
 import Typography from '../Typography/Typography';
 import './ServiceCard.styles.scss';
-import ArrowIcon from '../../../public/assets/circle-arrow-icon.svg?react';
+import Link from '../Link/Link';
 
 interface IServiceCard {
   variant?: 'primary' | 'secondary' | 'accent';
@@ -10,20 +10,20 @@ interface IServiceCard {
 
 function ServiceCard({ variant = 'primary', title, src }: IServiceCard) {
   let highlight: 'accent' | 'white';
-  let linkColor: 'primary' | 'secondary';
+  let linkVariant: 'black' | 'white-2';
 
   switch (variant) {
     case 'primary':
       highlight = 'accent';
-      linkColor = 'primary';
+      linkVariant = 'black';
       break;
     case 'secondary':
       highlight = 'white';
-      linkColor = 'secondary';
+      linkVariant = 'white-2';
       break;
     case 'accent':
       highlight = 'white';
-      linkColor = 'primary';
+      linkVariant = 'black';
       break;
   }
 
@@ -43,14 +43,7 @@ function ServiceCard({ variant = 'primary', title, src }: IServiceCard) {
               {titleSecondRow}
             </Typography>
           </div>
-          <div
-            className={`service-card__learn-more service-card__learn-more--${variant}`}
-          >
-            <ArrowIcon />
-            <Typography className='service-card-link__text' color={linkColor}>
-              Learn more
-            </Typography>
-          </div>
+          <Link variant={linkVariant} label='Learn more' />
         </div>
         <img
           src={`/assets/${src}.png`}

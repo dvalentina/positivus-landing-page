@@ -47,41 +47,6 @@
     justify-content: space-between;
   }
 
-  &__learn-more {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-
-    &--primary,
-    &--accent {
-      .circle-arrow-icon {
-        &__circle {
-          color: colors.$dark;
-        }
-        &__arrow {
-          color: colors.$green;
-        }
-      }
-    }
-
-    &--secondary {
-      .circle-arrow-icon {
-        &__circle {
-          color: colors.$white;
-        }
-        &__arrow {
-          color: colors.$dark;
-        }
-      }
-    }
-  }
-
-  &-link__text {
-    span {
-      font-size: 20px;
-    }
-  }
-
   &--primary {
     background: colors.$grey;
   }

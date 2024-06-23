@@ -1,0 +1,113 @@
+@use 'src/styles/colors';
+@use 'src/styles/typography';
+
+.link {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  width: fit-content;
+  min-height: 28px;
+
+  &--simple-black,
+  &--simple-white,
+  &--simple-green {
+    flex-direction: row-reverse;
+  }
+
+  &__icon {
+    &--black {
+      .circle-arrow-icon {
+        &__circle {
+          color: colors.$black;
+        }
+        &__arrow {
+          color: colors.$green;
+        }
+      }
+    }
+
+    &--black-2 {
+      .circle-arrow-icon {
+        &__circle {
+          color: colors.$black;
+        }
+        &__arrow {
+          color: colors.$white;
+        }
+      }
+    }
+
+    &--green {
+      .circle-arrow-icon {
+        &__circle {
+          color: colors.$green;
+        }
+        &__arrow {
+          color: colors.$white;
+        }
+      }
+    }
+
+    &--green-2 {
+      .circle-arrow-icon {
+        &__circle {
+          color: colors.$black;
+        }
+        &__arrow {
+          color: colors.$green;
+        }
+      }
+    }
+
+    &--white {
+      .circle-arrow-icon {
+        &__circle {
+          color: colors.$white;
+        }
+        &__arrow {
+          color: colors.$green;
+        }
+      }
+    }
+
+    &--white-2 {
+      .circle-arrow-icon {
+        &__circle {
+          color: colors.$white;
+        }
+        &__arrow {
+          color: colors.$black;
+        }
+      }
+    }
+
+    &--simple-black {
+      color: colors.$black;
+    }
+    &--simple-white {
+      color: colors.$white;
+    }
+    &--simple-green {
+      color: colors.$green;
+    }
+  }
+
+  &__label {
+    font-family: typography.$space-grotesk;
+    font-size: 20px;
+
+    &--black,
+    &--black-2,
+    &--green,
+    &--simple-black {
+      color: colors.$black;
+    }
+
+    &--green-2,
+    &--white,
+    &--white-2,
+    &--simple-white {
+      color: colors.$white;
+    }
+  }
+}
