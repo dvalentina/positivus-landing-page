@@ -4,10 +4,10 @@ import Typography from '../../Typography/Typography';
 import './Services.styles.scss';
 
 function Services({ className = '' }: { className?: string }) {
-  const variantsOrder: Array<'primary' | 'secondary' | 'accent'> = [
-    'primary',
-    'accent',
-    'secondary',
+  const variantsOrder: Array<'grey' | 'dark' | 'green'> = [
+    'grey',
+    'green',
+    'dark',
   ];
 
   const serviceCardsComponents = serviceCards.map((item, index) => (

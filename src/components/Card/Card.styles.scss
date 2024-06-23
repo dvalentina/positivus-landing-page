@@ -1,0 +1,51 @@
+@use 'src/styles/colors';
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+
+  &::after {
+    content: '';
+    border-radius: 0 0 45px 45px;
+    border: 1px solid colors.$dark;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    background: colors.$black;
+    transform: translateZ(-1px);
+    transition: bottom 0.1s ease-in;
+    box-sizing: border-box;
+  }
+
+  &:hover {
+    .card__moving-part {
+      transform: translateY(-7px);
+    }
+  }
+
+  &__moving-part {
+    height: 100%;
+    border: 1px solid colors.$black;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in;
+
+    &--grey {
+      background: colors.$grey;
+    }
+
+    &--dark {
+      background: colors.$dark;
+    }
+
+    &--green {
+      background: colors.$green;
+    }
+  }
+}

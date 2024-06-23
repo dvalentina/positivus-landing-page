@@ -1,27 +1,28 @@
 import Typography from '../Typography/Typography';
 import './ServiceCard.styles.scss';
 import Link from '../Link/Link';
+import Card from '../Card/Card';
 
 interface IServiceCard {
-  variant?: 'primary' | 'secondary' | 'accent';
+  variant?: 'grey' | 'dark' | 'green';
   title: string;
   src: string;
 }
 
-function ServiceCard({ variant = 'primary', title, src }: IServiceCard) {
+function ServiceCard({ variant = 'grey', title, src }: IServiceCard) {
   let highlight: 'accent' | 'white';
   let linkVariant: 'black' | 'white-2';
 
   switch (variant) {
-    case 'primary':
+    case 'grey':
       highlight = 'accent';
       linkVariant = 'black';
       break;
-    case 'secondary':
+    case 'dark':
       highlight = 'white';
       linkVariant = 'white-2';
       break;
-    case 'accent':
+    case 'green':
       highlight = 'white';
       linkVariant = 'black';
       break;
@@ -32,26 +33,24 @@ function ServiceCard({ variant = 'primary', title, src }: IServiceCard) {
   const titleSecondRow = titleWords[titleWords.length - 1];
 
   return (
-    <div className='service-card-wrapper'>
-      <div className={`service-card service-card--${variant}`}>
-        <div className='service-card-text'>
-          <div>
-            <Typography role='h3' type='h3' highlight={highlight}>
-              {titleFirstRow.join(' ')}
-            </Typography>
-            <Typography role='h3' type='h3' highlight={highlight}>
-              {titleSecondRow}
-            </Typography>
-          </div>
-          <Link variant={linkVariant} label='Learn more' />
+    <Card variant={variant} className='service-card'>
+      <div className='service-card-text'>
+        <div>
+          <Typography role='h3' type='h3' highlight={highlight}>
+            {titleFirstRow.join(' ')}
+          </Typography>
+          <Typography role='h3' type='h3' highlight={highlight}>
+            {titleSecondRow}
+          </Typography>
         </div>
-        <img
-          src={`/assets/${src}.png`}
-          alt={title}
-          className='service-card__image'
-        />
+        <Link variant={linkVariant} label='Learn more' />
       </div>
-    </div>
+      <img
+        src={`/assets/${src}.png`}
+        alt={title}
+        className='service-card__image'
+      />
+    </Card>
   );
 }
 
