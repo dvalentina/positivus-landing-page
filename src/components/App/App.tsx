@@ -9,6 +9,7 @@ import { useLayoutEffect } from 'react';
 import Services from '../AppSections/Services/Services';
 import FreeProposal from '../AppSections/FreeProposal/FreeProposal';
 import CaseStudies from '../AppSections/CaseStudies/CaseStudies';
+import OurWorkingProcess from '../AppSections/OurWorkingProcess/OurWorkingProcess';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -35,6 +36,7 @@ function App() {
           <Services className='app__services' />
           <FreeProposal className='app__free-proposal' />
           <CaseStudies className='app__case-studies' />
+          <OurWorkingProcess className='app__our-working-process' />
           <Footer />
         </div>
       </div>
