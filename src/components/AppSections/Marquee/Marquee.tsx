@@ -1,11 +1,11 @@
 import { gsap } from 'gsap';
 import './Marquee.styles.scss';
-import AmazonLogo from '../../../public/assets/amazon.svg?react';
-import DribbbleLogo from '../../../public/assets/dribbble.svg?react';
-import HubspotLogo from '../../../public/assets/hubspot.svg?react';
-import NotionLogo from '../../../public/assets/notion.svg?react';
-import NetflixLogo from '../../../public/assets/netflix.svg?react';
-import ZoomLogo from '../../../public/assets/zoom.svg?react';
+import AmazonLogo from '../../../../public/assets/amazon.svg?react';
+import DribbbleLogo from '../../../../public/assets/dribbble.svg?react';
+import HubspotLogo from '../../../../public/assets/hubspot.svg?react';
+import NotionLogo from '../../../../public/assets/notion.svg?react';
+import NetflixLogo from '../../../../public/assets/netflix.svg?react';
+import ZoomLogo from '../../../../public/assets/zoom.svg?react';
 import { useRef, useLayoutEffect, useEffect } from 'react';
 
 function Marquee({ className }: { className?: string }) {

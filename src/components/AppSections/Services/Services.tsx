@@ -1,6 +1,6 @@
-import { serviceCards } from '../../constants';
-import ServiceCard from '../ServiceCard/ServiceCard';
-import Typography from '../Typography/Typography';
+import { serviceCards } from '../../../constants';
+import ServiceCard from '../../ServiceCard/ServiceCard';
+import Typography from '../../Typography/Typography';
 import './Services.styles.scss';
 
 function Services({ className = '' }: { className?: string }) {

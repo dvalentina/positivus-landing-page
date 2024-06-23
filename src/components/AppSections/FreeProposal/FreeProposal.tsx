@@ -1,9 +1,9 @@
-import Button from '../Button/Button';
-import Typography from '../Typography/Typography';
+import Button from '../../Button/Button';
+import Typography from '../../Typography/Typography';
 import './FreeProposal.styles.scss';
-import FreeProposalIllustration from '../../../public/assets/free-proposal-illustration.svg?react';
+import FreeProposalIllustration from '../../../../public/assets/free-proposal-illustration.svg?react';
 import { useEffect, useRef } from 'react';
-import { floatIt, parallaxIt, spinIt } from '../../animations';
+import { floatIt, parallaxIt, spinIt } from '../../../animations';
 
 function FreeProposal({ className = '' }: { className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);

@@ -1,7 +1,7 @@
-import Button from '../Button/Button';
-import Typography from '../Typography/Typography';
+import Button from '../../Button/Button';
+import Typography from '../../Typography/Typography';
 import './AboutUs.styles.scss';
-import AboutUsIllustration from '../../../public/assets/about-us-illustration.svg?react';
+import AboutUsIllustration from '../../../../public/assets/about-us-illustration.svg?react';
 import { useRef, useEffect } from 'react';
 import {
   floatIt,
@@ -9,7 +9,7 @@ import {
   rotateIt,
   scaleIt,
   spinIt,
-} from '../../animations';
+} from '../../../animations';
 
 function AboutUs({ className }: { className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
