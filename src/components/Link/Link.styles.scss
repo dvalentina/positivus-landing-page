@@ -84,9 +84,11 @@
     &--simple-black {
       color: colors.$black;
     }
+
     &--simple-white {
       color: colors.$white;
     }
+
     &--simple-green {
       color: colors.$green;
     }
@@ -108,6 +110,10 @@
     &--white-2,
     &--simple-white {
       color: colors.$white;
+    }
+
+    &--simple-green {
+      color: colors.$green;
     }
   }
 }
