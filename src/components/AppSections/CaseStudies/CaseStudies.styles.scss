@@ -1,0 +1,31 @@
+@use 'src/styles/colors';
+
+.case-studies {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  &-title {
+    display: flex;
+    gap: 40px;
+
+    &__subtitle {
+      width: 500px;
+    }
+  }
+
+  &-banner {
+    background: colors.$dark;
+    border-radius: 45px;
+    padding: 70px 60px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 60px;
+  }
+
+  &-case-study {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
