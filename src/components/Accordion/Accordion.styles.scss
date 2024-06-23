@@ -1,0 +1,67 @@
+@use 'src/styles/colors';
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  list-style-type: none;
+
+  &-item {
+    .card__moving-part {
+      display: flex;
+      flex-direction: column;
+      padding: 41px 60px;
+
+      transition: transform 0.1s ease-in, background-color 0.1s ease-in;
+    }
+
+    &:hover .card__moving-part {
+      background-color: colors.$green;
+    }
+  }
+
+  &-title {
+    display: flex;
+    align-items: center;
+
+    &__icon {
+      margin-left: auto;
+
+      .plus-icon__vertical-line {
+        transform-origin: center;
+        transition: transform 0.2s ease-out;
+      }
+
+      &--open .plus-icon__vertical-line {
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.1s ease-out;
+
+    &--open {
+      grid-template-rows: 1fr;
+    }
+
+    &-overflow-helper {
+      overflow: hidden;
+    }
+
+    &-padding-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-top: 30px;
+    }
+  }
+
+  &__hr {
+    border: none;
+    border-top: 1px solid colors.$black;
+  }
+}

@@ -1,0 +1,5 @@
+<svg className="plus-icon" width="58" height="59" viewBox="0 0 58 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="29" cy="29.5" r="28.5" fill="#F3F3F3" stroke="#191A23"/>
+<path className="plus-icon__vertical-line" d="M 25.6 41.58 V 16.5 H 31.48 V 41.58 H 25.6 Z" fill="#191A23"/>
+<path className="plus-icon__horizontal-line" d="M 16 31.86 V 26.22 H 41.08 V 31.86 H 16 Z" fill="#191A23"/>
+</svg>
