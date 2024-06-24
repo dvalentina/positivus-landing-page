@@ -1,0 +1,35 @@
+@use 'src/styles/colors';
+
+.avatar {
+  width: 98px;
+  height: 98px;
+  transform-style: preserve-3d;
+  position: relative;
+
+  &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: multiply;
+    background: colors.$green;
+  }
+
+  &-mask {
+    mask-image: url('/assets/avatar-shape.svg');
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+
+  &::after {
+    content: url('/assets/avatar-shape.svg');
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: colors.$dark;
+    top: 5px;
+    left: 5px;
+    transform: translateZ(-1px);
+  }
+}
