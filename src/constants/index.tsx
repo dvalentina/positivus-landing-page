@@ -59,3 +59,54 @@ export const ourWorkingProcess = [
       'During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements.',
   },
 ];
+
+export const team = [
+  {
+    avatarSrc: 'john-smith.jpg',
+    name: 'John Smith',
+    jobTitle: 'CEO and Founder',
+    linkedInURL: '',
+    experience:
+      '10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy',
+  },
+  {
+    avatarSrc: 'jane-doe.jpg',
+    name: 'Jane Doe',
+    jobTitle: 'Director of Operations',
+    linkedInURL: '',
+    experience:
+      '7+ years of experience in project management and team leadership. Strong organizational and communication skills',
+  },
+  {
+    avatarSrc: 'michael-brown.jpg',
+    name: 'Michael Brown',
+    jobTitle: 'Senior SEO Specialist',
+    linkedInURL: '',
+    experience:
+      '5+ years of experience in SEO and content creation. Proficient in keyword research and on-page optimization',
+  },
+  {
+    avatarSrc: 'emily-johnson.jpg',
+    name: 'Emily Johnson',
+    jobTitle: 'PPC Manager',
+    linkedInURL: '',
+    experience:
+      '3+ years of experience in paid search advertising. Skilled in campaign management and performance analysis',
+  },
+  {
+    avatarSrc: 'brian-williams.jpg',
+    name: 'Brian Williams',
+    jobTitle: 'Social Media Specialist',
+    linkedInURL: '',
+    experience:
+      '4+ years of experience in social media marketing. Proficient in creating and scheduling content, analyzing metrics, and building engagement',
+  },
+  {
+    avatarSrc: 'sarah-kim.jpg',
+    name: 'Sarah Kim',
+    jobTitle: 'Content Creator',
+    linkedInURL: '',
+    experience:
+      '2+ years of experience in writing and editing. Skilled in creating compelling, SEO-optimized content for various industries',
+  },
+];

@@ -1,0 +1,19 @@
+.team {
+  display: flex;
+  flex-direction: column;
+
+  &-cards {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  &__team-cards {
+    margin: 80px 0 40px 0;
+  }
+
+  .button {
+    width: 269px;
+    align-self: flex-end;
+  }
+}
