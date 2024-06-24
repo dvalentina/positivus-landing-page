@@ -5,15 +5,6 @@
   flex-direction: column;
   gap: 80px;
 
-  &-title {
-    display: flex;
-    gap: 40px;
-
-    &__subtitle {
-      width: 500px;
-    }
-  }
-
   &-banner {
     background: colors.$dark;
     border-radius: 45px;

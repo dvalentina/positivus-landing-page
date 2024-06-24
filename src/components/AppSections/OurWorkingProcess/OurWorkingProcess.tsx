@@ -1,5 +1,6 @@
 import { ourWorkingProcess } from '../../../constants';
 import Accordion from '../../Accordion/Accordion';
+import SectionHeading from '../../SectionHeading/SectionHeading';
 import Typography from '../../Typography/Typography';
 import './OurWorkingProcess.styles.scss';
 
@@ -20,14 +21,12 @@ function OurWorkingProcess({ className = '' }: { className: string }) {
 
   return (
     <section id='our-working-process' className={`process ${className}`}>
-      <div className='process-title'>
-        <Typography role='h2' type='h2' color='primary' highlight='accent'>
-          Our Working Process
-        </Typography>
-        <Typography className='process-title__subtitle'>
+      <SectionHeading>
+        <SectionHeading.Title>Our Working Process</SectionHeading.Title>
+        <SectionHeading.Subtitle width='292px'>
           Step-by-Step Guide to Achieving Your Business Goals
-        </Typography>
-      </div>
+        </SectionHeading.Subtitle>
+      </SectionHeading>
       <Accordion>{ourWorkingProcessComponents}</Accordion>
     </section>
   );

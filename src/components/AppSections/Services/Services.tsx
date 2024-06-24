@@ -1,6 +1,6 @@
 import { serviceCards } from '../../../constants';
+import SectionHeading from '../../SectionHeading/SectionHeading';
 import ServiceCard from '../../ServiceCard/ServiceCard';
-import Typography from '../../Typography/Typography';
 import './Services.styles.scss';
 
 function Services({ className = '' }: { className?: string }) {
@@ -20,15 +20,13 @@ function Services({ className = '' }: { className?: string }) {
 
   return (
     <section id='#services' className={`services ${className}`}>
-      <div className='services-title'>
-        <Typography role='h2' type='h2' color='primary' highlight='accent'>
-          Services
-        </Typography>
-        <Typography className='services-subtitle'>
+      <SectionHeading>
+        <SectionHeading.Title>Services</SectionHeading.Title>
+        <SectionHeading.Subtitle width='580px'>
           At our digital marketing agency, we offer a range of services to help
           businesses grow and succeed online. These services include:
-        </Typography>
-      </div>
+        </SectionHeading.Subtitle>
+      </SectionHeading>
       <div className='services-cards-container'>{serviceCardsComponents}</div>
     </section>
   );
