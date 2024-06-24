@@ -1,0 +1,45 @@
+@use 'src/styles/colors';
+
+.team-card {
+  width: 386px;
+
+  .card__moving-part {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    justify-content: flex-start;
+    padding: 40px 35px;
+    position: relative;
+    cursor: auto;
+  }
+
+  &-upper {
+    display: flex;
+    gap: 23px;
+    align-items: flex-end;
+  }
+
+  &-icon {
+    height: 34px;
+    width: 34px;
+
+    .linkedin-icon {
+      &__circle {
+        color: colors.$black;
+      }
+      &__symbol {
+        color: colors.$green;
+      }
+    }
+  }
+
+  &__team-card-icon {
+    position: absolute;
+    top: 40px;
+    right: 35px;
+  }
+
+  &__job-title {
+    width: 193px;
+  }
+}

@@ -3,7 +3,7 @@ import './Card.styles.scss';
 interface ICard {
   className?: string;
   children?: React.ReactNode;
-  variant?: 'grey' | 'green' | 'dark';
+  variant?: 'grey' | 'green' | 'dark' | 'white';
 }
 
 function Card({ className = '', children, variant = 'grey' }: ICard) {
