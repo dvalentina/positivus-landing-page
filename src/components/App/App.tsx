@@ -11,6 +11,7 @@ import FreeProposal from '../AppSections/FreeProposal/FreeProposal';
 import CaseStudies from '../AppSections/CaseStudies/CaseStudies';
 import OurWorkingProcess from '../AppSections/OurWorkingProcess/OurWorkingProcess';
 import Team from '../AppSections/Team/Team';
+import Testimonials from '../AppSections/Testimonials/Testimonials';
 
 function App() {
   gsap.registerPlugin(ScrollTrigger);
@@ -39,6 +40,7 @@ function App() {
           <CaseStudies className='app__case-studies' />
           <OurWorkingProcess className='app__our-working-process' />
           <Team className='app__team' />
+          <Testimonials className='app__testimonials' />
           <Footer />
         </div>
       </div>

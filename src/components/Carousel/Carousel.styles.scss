@@ -1,0 +1,80 @@
+@use 'src/styles/colors';
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 116px;
+  width: 100%;
+  height: fit-content;
+  border-radius: 45px;
+  padding: 84px 0 60px 0;
+  box-sizing: border-box;
+  background: colors.$dark;
+  overflow-x: hidden;
+
+  position: relative;
+
+  &-items {
+    display: flex;
+    gap: 50px;
+    align-items: flex-end;
+  }
+
+  &-item {
+    cursor: pointer;
+  }
+
+  &-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    width: 644px;
+
+    &__arrow {
+      color: colors.$white;
+      transform-origin: center;
+
+      &--left {
+        transform: rotate(-148deg);
+      }
+
+      &--right {
+        transform: rotate(30deg);
+      }
+    }
+
+    &-stars {
+      display: flex;
+      gap: 10px;
+    }
+
+    &__star {
+      transition: color 0.5s ease;
+      color: colors.$white;
+
+      &--chosen {
+        color: colors.$green;
+      }
+    }
+
+    &__button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &--big {
+        width: 100px;
+        height: 36px;
+      }
+
+      &--small {
+        width: 26px;
+        height: 26px;
+      }
+    }
+  }
+}
