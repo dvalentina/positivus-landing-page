@@ -24,6 +24,15 @@
   &-social-icons {
     display: flex;
     gap: 20px;
+
+    .linkedin-icon {
+      &__circle {
+        color: colors.$white;
+      }
+      &__symbol {
+        color: colors.$black;
+      }
+    }
   }
 
   &-navigation-links {
