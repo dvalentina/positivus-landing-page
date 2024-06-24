@@ -1,4 +1,5 @@
 import { caseStudies } from '../../../constants';
+import Divider from '../../Divider/Divider';
 import Link from '../../Link/Link';
 import SectionHeading from '../../SectionHeading/SectionHeading';
 import Typography from '../../Typography/Typography';
@@ -12,7 +13,9 @@ function CaseStudies({ className = '' }: { className?: string }) {
           <Typography color='secondary'>{item.text}</Typography>
           <Link label='Learn more' variant='simple-green' />
         </div>
-        {index !== caseStudies.length - 1 ? <hr /> : null}
+        {index !== caseStudies.length - 1 ? (
+          <Divider color='white' orientation='vertical' />
+        ) : null}
       </>
     );
   });

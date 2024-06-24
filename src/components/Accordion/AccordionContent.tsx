@@ -1,3 +1,4 @@
+import Divider from '../Divider/Divider';
 import { useAccordionContext } from './Accordion';
 import './Accordion.styles.scss';
 
@@ -18,7 +19,7 @@ function AccordionContent({
     >
       <div className='accordion-content-overflow-helper'>
         <div className='accordion-content-padding-wrapper'>
-          <hr className='accordion__hr' />
+          <Divider color='black' />
           {children}
         </div>
       </div>

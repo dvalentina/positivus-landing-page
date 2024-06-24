@@ -6,6 +6,7 @@ import TwitterLogo from '../../../public/assets/twitter.svg?react';
 import Button from '../Button/Button';
 import PositivusLogo from '../PositivusLogo/PositivusLogo';
 import { navigationLinks } from '../../constants';
+import Divider from '../Divider/Divider';
 
 function Footer() {
   const navigationLinksComponents = navigationLinks.map((item) => (
@@ -55,7 +56,7 @@ function Footer() {
           />
         </form>
       </div>
-      <hr />
+      <Divider color='white' />
       <div className='footer-signature'>
         <Typography role='span' type='p' color='secondary'>
           © 2023 Positivus. All Rights Reserved.

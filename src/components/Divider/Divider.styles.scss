@@ -1,0 +1,21 @@
+@use 'src/styles/colors';
+
+.divider {
+  border: none;
+
+  &--white {
+    background: colors.$white;
+  }
+
+  &--black {
+    background: colors.$black;
+  }
+
+  &--vertical {
+    width: 1px;
+  }
+
+  &--horizontal {
+    height: 1px;
+  }
+}
