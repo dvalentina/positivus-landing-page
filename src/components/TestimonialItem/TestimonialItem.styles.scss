@@ -1,0 +1,44 @@
+@use 'src/styles/colors';
+
+.testimonial-item {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+  }
+
+  &__bubble {
+    border: 1px solid colors.$green;
+    border-radius: 45px;
+    padding: 48px 52px 52px 52px;
+    box-sizing: border-box;
+    height: 238px;
+    width: min-content;
+    min-width: 600px;
+    position: relative;
+
+    @mixin triangle($height, $color) {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      border-style: solid;
+      border-color: $color transparent transparent transparent;
+      border-width: $height;
+      left: calc(80px - $height);
+      bottom: calc(-1 * ($height * 2));
+    }
+
+    &::before {
+      @include triangle($height: 32px, $color: colors.$green);
+    }
+
+    &::after {
+      @include triangle($height: 30px, $color: colors.$dark);
+    }
+  }
+}
