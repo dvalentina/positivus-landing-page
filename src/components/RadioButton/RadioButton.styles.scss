@@ -1,0 +1,44 @@
+@use 'src/styles/colors';
+@use 'src/styles/typography';
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  user-select: none;
+  font-family: typography.$space-grotesk;
+  font-size: 20px;
+  font-weight: 400;
+  color: colors.$black;
+
+  &__input {
+    cursor: pointer;
+    appearance: none;
+    margin: 0;
+    font: inherit;
+    color: colors.$black;
+    width: 28px;
+    height: 28px;
+    border: 1px solid colors.$black;
+    border-radius: 50%;
+    background-color: colors.$white;
+    box-sizing: border-box;
+    display: grid;
+    place-content: center;
+
+    &::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      background: colors.$green;
+    }
+
+    &:checked:before {
+      transform: scale(1);
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@use 'src/styles/colors';
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  &-container {
+    position: relative;
+    border-radius: 45px;
+    background: colors.$grey;
+    padding: 60px 100px 80px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  &-form {
+    width: 556px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &__radio-buttons {
+      border: none;
+      display: flex;
+      gap: 35px;
+    }
+
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      border: none;
+    }
+  }
+
+  &__illustration {
+    position: absolute;
+    top: 50%;
+    right: 21px;
+    transform: translate(50%, -50%);
+    pointer-events: none;
+    overflow: visible;
+  }
+}
